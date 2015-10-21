@@ -1,0 +1,191 @@
+@charset "utf-8";
+/*1、大小（文字 按钮 DIV）*/
+/*2、颜色（文字 按钮）*/
+/*3、网格系统（18格）*/
+/*4、形状（圆角）*/
+
+/*初始化*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* 在旧版本浏览器中显示HTML5元素 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-size: 100%;
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    color: #0000FF;
+    text-decoration: none;
+}
+figure {
+    margin: 0;
+}
+img {
+    vertical-align: middle;
+}
+/*网格系统*/
+.container {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 480px) {
+    .container {
+        width: 460px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+@media (min-width: 1920px) {
+    .container {
+        width: 1900px;
+    }
+}
+.container-fluid {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    float: left;
+}
+.col-12 {
+    width: 100%;
+}
+.col-11 {
+    width: 91.66666667%;
+}
+.col-10 {
+    width: 83.33333333%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-8 {
+    width: 66.66666667%;
+}
+.col-7 {
+    width: 58.33333333%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-5 {
+    width: 41.66666667%;
+}
+.col-4 {
+    width: 33.33333333%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-2 {
+    width: 16.66666667%;
+}
+.col-1 {
+    width: 8.33333333%;
+}
+/*按钮*/
+.btn{
+    padding: 10px 15px;
+    font-size: 14px;
+    line-height: 14px;
+}
+/*颜色*/
+.btn-red{
+    color: rgba(255,255,255,0.9);
+    background-color: rgba(255,0,0,.9);
+    border-color: rgba(255,0,0,1);
+}
+.btn-red:hover,
+.btn-red:focus,
+.btn-red:active,
+.btn-red:link{
+    color: rgba(255,255,255,1);
+    background-color: rgba(255,0,0,1);
+    border-color: rgba(255,0,0,1);
+}
+/*大小*/
+.btn-lg,
+.btn-group-lg > .btn {
+    padding: 10px 15px;
+    font-size: 20px;
+    line-height: 20px;
+}
+.btn-sm,
+.btn-group-sm > .btn {
+    padding: 3px 5px;
+    font-size: 12px;
+    line-height: 12px;
+}
+.btn-block{
+    display: block;
+    width: 100%;
+}
+/*圆角*/
+.btn-circle{
+    border-radius: 5px;
+}

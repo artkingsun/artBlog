@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>导航页面</title>
+<style type="text/css">
+*{ 
+	margin:0; 
+	padding:0; 
+	font-family:"宋体"; 
+	font-size:14px;
+	box-sizing:border-box;
+}
+.container{
+	margin: 0 auto;
+	padding: 10px;
+	width: 90%;
+	min-height: 20px;
+}
+.content-left{
+	width: 15%;
+	height: auto;
+	float: left;
+}
+.content-right{
+	width: 85%;
+	height: auto;
+	float: left;
+}
+.nav{
+	margin: 0;
+	padding: 10px;
+	width: 100%;
+}
+.nav:after{
+	display:block;
+	clear:both;
+	content:"";
+	visibility:hidden;
+	height:0;
+}
+.nav>li{
+	cursor:pointer;
+	text-align: center;
+	font-weight: bold;
+	width: 150px;
+	height: 50px;
+	padding: 10px;
+	list-style: none;
+	/*float: left;*/
+	font-size:20px;
+	line-height: 30px;
+	color: rgba(0,0,0,1);
+	background-color: rgba(174,221,129,1);
+}
+.nav>.active,
+.nav>li:hover{
+	background-color: rgba(107,194,53,1);
+}
+.content{
+	width: 100%;
+}
+.content>.item{
+	display: inline-block;
+	margin: 10px;
+}
+.content>.item>a{
+	width: 150px;
+	height: auto;
+	text-decoration: none;
+}
+.btn{
+	padding: 10px;
+	font-size:20px;
+	line-height: 20px;
+	text-align: center;
+}
+.btn-lg{
+	padding: 15px;
+	font-size:20px;
+	line-height: 20px;
+	font-weight: bold;
+}
+.btn-circle{
+	border-radius: 5px;
+}
+.btn-block{
+	display: block;
+	width: 100%;
+}
+.btn-green{
+	color: rgba(0,0,0,1);
+	background-color: rgba(174,221,129,0.8);
+}
+.btn-green:hover{
+	color: rgba(0,0,0,1);
+	background-color: rgba(174,221,129,1);
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="content-left">
+		<ul class="nav" id="nav">
+			<!-- <li class="active">当前激活</li>
+			<li>分类1</li>
+			<li>分类1</li> -->
+		</ul>
+	</div>
+	<div class="content-right">
+		<div class="content" id="content">
+			<!-- <div class="item">
+				<a class="btn btn-green btn-lg btn-block btn-circle" href="#" target="_blank">链接1</a>
+			</div>
+			<div class="item">
+				<a class="btn btn-green btn-lg btn-block btn-circle" href="#" target="_blank">链接1</a>
+			</div>
+			<div class="item">
+				<a class="btn btn-green btn-lg btn-block btn-circle" href="#" target="_blank">链接1</a>
+			</div>
+			<div class="item">
+				<a class="btn btn-green btn-lg btn-block btn-circle" href="#" target="_blank">链接1</a>
+			</div> -->
+		</div>
+	</div>
+	
+	
+</div>
+
+<script type="text/javascript">
+	window.onload=function(){
+		var listContent = new Array();
+		listContent = [
+			{"name":"慕课网","url":"http://www.imooc.com/","type":"教学视频"},
+			{"name":"实验楼","url":"https://www.shiyanlou.com/","type":"教学视频"},
+			{"name":"慕课网","url":"http://www.imooc.com/","type":"教学视频"},			
+			{"name":"传智播客","url":"http://www.itcast.cn/","type":"教学视频"},
+			{"name":"极客学院","url":"http://www.jikexueyuan.com/","type":"教学视频"},
+
+			{"name":"BootStrap","url":"http://www.bootcss.com/","type":"文档资源"},
+			{"name":"ThinkPHP","url":"http://www.thinkphp.cn/","type":"文档资源"},
+			{"name":"W3school","url":"http://www.w3school.com.cn/index.html","type":"文档资源"},
+			{"name":"菜鸟教程","url":"http://www.runoob.com/","type":"文档资源"},
+			{"name":"JQ插件库","url":"http://www.jq22.com/","type":"文档资源"},
+			{"name":"JS代码网","url":"http://www.js-css.cn/","type":"文档资源"},
+			{"name":"前端网","url":"http://www.w3cfuns.com/","type":"文档资源"},
+			{"name":"W3CPlus","url":"http://www.w3cplus.com/","type":"文档资源"},
+			{"name":"开源中国","url":"http://www.oschina.net/","type":"文档资源"},
+			{"name":"千图网","url":"http://www.58pic.com/","type":"文档资源"},
+
+			{"name":"SF","url":"http://segmentfault.com/","type":"技术站点"},
+			{"name":"廖雪峰官网","url":"http://www.liaoxuefeng.com/","type":"技术站点"},
+			{"name":"爱编程","url":"http://www.w2bc.com/","type":"技术站点"},
+			{"name":"远景论坛","url":"http://bbs.pcbeta.com/","type":"技术站点"},
+
+			{"name":"腾讯网前端","url":"http://qqfe.org/","type":"WEB前端"},
+			{"name":"淘宝网UED","url":"http://ued.taobao.org/blog/","type":"WEB前端"},
+			{"name":"WEB开发者","url":"http://www.admin10000.com/","type":"WEB前端"},
+			{"name":"HTML中国","url":"http://www.html5cn.org/","type":"WEB前端"},
+			{"name":"JS密码花园","url":"http://bonsaiden.github.io/avaScript-Garden/zh/","type":"WEB前端"},
+
+			{"name":"GitHub","url":"https://github.com/","type":"版本控制"},
+			{"name":"Git@OSC","url":"https://git.oschina.net/","type":"版本控制"},
+			{"name":"Team@OSC","url":"https://team.oschina.net/","type":"版本控制"},
+			{"name":"Worktile","url":"https://worktile.com/","type":"版本控制"},
+		];
+		var listType = "全部分类";
+		var navContent = new Array();
+		navContent = ["教学视频","文档资源","WEB前端","技术站点","版本控制"];
+		var nav = document.getElementById('nav');
+		var content = document.getElementById('content');
+		function getNav(){
+			var navHtml = '<li class="active">全部分类</li>';
+			for (var i = navContent.length - 1; i >= 0; i--) {
+				navHtml += '<li>'+ navContent[i] + '</li>';
+			};
+			nav.innerHTML = navHtml;
+			showItem(listType);
+			chooseNav();
+		}
+		function chooseNav(){
+			var lists = nav.getElementsByTagName('li');
+			for(var i=0;i<lists.length;i++){
+        		lists[i].onmouseover=function(){
+        			for (var j = lists.length - 1; j >= 0; j--) {
+        				lists[j].className = "";		
+        			};
+            		this.setAttribute("class","active");
+            		//this.className = "active";//也是可以的
+            		listType = this.innerHTML;
+            		showItem(listType);
+        		}
+     		}
+		}
+		function showItem(listType){
+			var contentHtml = "";
+			for (var i = 0; i < listContent.length; i++) {
+				if (listContent[i].type == listType) {
+					contentHtml += '<div class="item"><a class="btn btn-green btn-lg btn-block" href="'
+								+ listContent[i].url + '" target="_blank">'
+								+ listContent[i].name + '</a></div>';
+				}
+				if(listType == "全部分类"){
+					contentHtml += '<div class="item"><a class="btn btn-green btn-lg btn-block" href="'
+								+ listContent[i].url + '" target="_blank">'
+								+ listContent[i].name + '</a></div>';
+				}
+			};
+			content.innerHTML = contentHtml;
+		}
+		getNav();
+	}
+</script>
+</body>
+</html>

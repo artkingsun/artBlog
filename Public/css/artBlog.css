@@ -1,0 +1,128 @@
+.toTop{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: auto;
+    height: auto;
+    /*background:url("../images/top_bg.png");*/
+    /*background-repeat: no-repeat;*/
+}
+.footer{
+    position: relative;
+    color:white;
+    bottom: 0;
+    padding: 20px;
+    background-color: #000000;
+}
+.footer ul{
+    list-style: none;
+}
+
+.personSet .addEssay{
+    display: none;
+}
+.error{
+    position: fixed;
+    margin: 200px auto;
+    width: 200px;
+    height: 50px;
+    color: #EE5757;
+    background-color: #31b0d5;
+    z-index: 1005;
+}
+#user,#login{
+    display: none;
+}
+.login-content{
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+.myBlog-left{
+    margin-top: 70px;
+    padding: 0 10px 150px 40px;
+    min-height: 600px;
+}
+.personSet-right{
+    margin: 70px 30px 30px 10px;
+    padding-top: 20px;
+    width: 100%;
+    min-height: 475px;
+}
+.myBlog-right{
+    margin: 70px 30px 30px 10px;
+    padding-top: 20px;
+    width: 100%;
+    min-height: 800px;
+}
+.direction-left{
+    text-align: left;
+}
+.direction-right{
+    text-align: right;
+}
+.direction-center{
+    text-align: center;
+}
+textarea{
+    resize: none;
+}
+.btn-r{
+    float: right;
+    margin-right: 10px;
+}
+.btn-l{
+    float: left;
+    margin-right: 10px;
+}
+.text-big{
+    font-size: 400%;
+}
+.text-medium{
+    font-size: 300%;
+}
+.text-md{
+    font-size: 150%;
+}
+.row{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.thumbnail a img{
+    width: 100%;
+    height: 150px;
+}
+.blog-pic{
+    width: 100%;
+    height: 150px;
+}
+
+.row-red{
+    background-color:#EE5757;
+}
+.row-strong-red{
+    background-color:#220807;
+}
+.row-strong-blue{
+    background-color: #113653;
+}
+.row-blue{
+    background-color: #31b0d5;
+}
+.row-black{
+    background-color: #040404;
+}
+.row-small-black{
+    background-color: #744e37;
+}
+.row-yellow{
+    background-color: #ec971f;
+}
+.row-sliver{
+    background-color: #efefef;
+}
+.row-green{
+    background-color: #449d44;
+}
+.row-blueviolet{
+    background-color: blueviolet;
+}

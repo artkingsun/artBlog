@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>图片展示显示详细说明和隐藏</title>
+<meta charset='utf-8'/>
+<style type="text/css">
+body, ul, li, ol {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+	font-size: 12px;
+	font-family: 微软雅黑;
+}
+img {
+	border: 0px;
+	width: 300px;
+	height: 200px;
+}
+.picList {
+	width: 100%;
+	float: left;
+}
+.picList .col {
+	width: 300px;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	margin: 10px 0 0 10px;
+}
+.picList .col img, .col a {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.picList .col img {
+	width: 100%;
+}
+.picList .col a {
+	display: block;
+	width: 280px;
+	height: 180px;
+    top:160px; 
+	background:#000;
+	color: white;
+	font-style: normal;
+	line-height: 25px;
+	padding: 10px;
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+<div class='picList' id="picList">
+	<div class='col' id="pic1" > 
+		<img src="1.png" />
+		<a href='#'>标题<br/>
+			内容
+		</a> 
+	</div>
+	<div class='col' id="pic2"> 
+		<img src="2.jpg" />
+		<a href='#'>标题<br/>
+			内容
+		</a> 
+	</div>
+	<div class='col' id="pic3"> 
+		<img src="3.jpg" />
+		<a href='#'>标题<br/>
+			内容
+		</a> 
+	</div>
+</div>
+<script type="text/javascript">
+    function imgDisplay(){
+		var Div = document.getElementById('picList').getElementsByTagName('div');
+        var divHeight = 160; //定义要改变值的大小
+        for(i=0;i<Div.length;i++){
+            Div[i].onmouseover=showImg;
+            Div[i].onmouseout=hideImg;
+        }
+		function showImg(){
+	        this.getElementsByTagName("a")[0].style.top=0;
+		}
+		function hideImg(){
+		    this.getElementsByTagName("a")[0].style.top=160+"px";
+        }
+	}
+	imgDisplay();
+</script>
+</body>
+</html>

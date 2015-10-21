@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+
+</body>
+<script>
+    var now = new Date();
+
+    var someDate1 = new Date(Date.parse("May 25,2004"));
+
+    var someDate2 = new Date("May 25,2004");
+
+    var yk1 = new Date(Date.UTC(2000,0));
+    //CMT时间2000年1月1日午夜0时
+    var yk2 = new Date(2005,5,5,17,55,55);
+    //CMT时间2005年5月5日 17:55:55
+
+    function doSomething(){
+        alert("ok");
+    }
+    //ES5添加了Date.now()方法
+    var start = Date.now();
+    //doSomething();
+    var stop = Date.now();
+    var result1 = stop-start;
+
+    //使用+操作符把Date对象转换成字符串
+    var start = +new Date();
+    //doSomething();
+    var stop = +new Date();
+    var result2 = stop-start;
+
+    var date1 = new Date(2007,0,1);
+    var date2 = new Date(2007,1,1);
+    //alert(date1.toUTCString());
+    //alert(result1 + "|" + result2);
+
+    var values = [1,2,3,4,5,6,7,8];
+    var max = Math.max.apply(Math,values);
+    var min = Math.min(3,54,32,16);
+//    alert( Math.ceil(25.9));
+//    alert( Math.floor(25.6));
+//    alert( Math.round(25.1));
+    var num = Math.floor(Math.random() * 9 + 2);
+    alert(document.URL);
+</script>
+</html>

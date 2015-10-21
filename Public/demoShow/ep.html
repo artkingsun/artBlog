@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>判断浏览器类型</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .col{
+            margin: 10px auto;
+            width: 500px;
+            height: 200px;
+            color: rgba(150,150,150,1);
+            background-color: rgba(50,50,50,1);
+        }
+
+    </style>
+</head>
+<body>
+<div id="epinfo" class="col">
+    <p>浏览器信息：</p>
+</div>
+<div id="eptype" class="col">
+    <p>浏览器类型：</p>
+</div>
+<script type="text/javascript">
+    window.onload = function() {
+        var ep = navigator.userAgent.toLowerCase();
+        var etype = "";
+        var eversion = "";
+//ie 
+        if (ep.indexOf("trident") >= 0) {
+            etype = "MSIE";
+            eversion = ep.substr(ep.length-16,4);
+        }
+//firefox 
+        else if (ep.indexOf("firefox") >= 0) {
+            etype = "Firefox";
+            eversion = ep.substr(ep.length-4,4);
+        }
+//Chrome
+        else if(ep.indexOf("chrome") >= 0){
+            etype = "Chrome";
+        }
+//Opera
+        else if(ep.indexOf("opera") >= 0){
+            etype = "Opera";
+        }
+//Safari
+        else if(ep.indexOf("safari") >= 0){
+            etype = "Safari";
+        }
+//Netscape
+        else if(ep.indexOf("netscape")>= 0) {
+            etype = "Netscape";
+        }
+        var epinfo = document.getElementById("epinfo");
+        var epinfohtml = '<p>浏览器信息：'+ ep +'</p>';
+
+        var eptype = document.getElementById("eptype");
+        var eptypehtml = '<p>浏览器类型：'+ etype +'</p>'
+                + '<p>浏览器版本：'+ eversion +'</p>';
+        epinfo.innerHTML = epinfohtml;
+        eptype.innerHTML = eptypehtml;
+    }
+</script>
+</body>
+</html>

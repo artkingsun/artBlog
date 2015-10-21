@@ -1,0 +1,1 @@
+a:8:{i:0;s:6:"workid";i:1;s:9:"worktitle";i:2;s:11:"workcontent";i:3;s:9:"workstart";i:4;s:10:"workfinish";i:5;s:6:"userid";s:3:"_pk";s:6:"workid";s:5:"_type";a:6:{s:6:"workid";s:7:"int(11)";s:9:"worktitle";s:11:"varchar(25)";s:11:"workcontent";s:12:"varchar(500)";s:9:"workstart";s:7:"int(11)";s:10:"workfinish";s:7:"int(11)";s:6:"userid";s:7:"int(11)";}}
